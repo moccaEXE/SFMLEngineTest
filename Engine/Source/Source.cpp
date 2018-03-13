@@ -1,8 +1,6 @@
 #include <SFML\Graphics.hpp>
-//#include "ResourceManager.cpp"
-//#include "ResourceManager.h"
 #include <iostream>
-#include "ResourceHolder.hpp"
+#include "../Header/ResourceHolder.hpp"
 
 // resource ID for sf::Texture
 namespace Textures
@@ -23,8 +21,8 @@ int main()
 
 	try
 	{
-		textures.load(Textures::Landscape, "Media/Textures/Desert.png");
-		textures.load(Textures::Airplane, "Media/Textures/Eagle.png");
+		textures.load(Textures::Landscape, "SFMLEngineTest/Media/Textures/Desert.png");
+		textures.load(Textures::Airplane, "SFMLEngineTest/Media/Textures/Eagle.png");
 	}
 
 	catch (std::runtime_error& e)

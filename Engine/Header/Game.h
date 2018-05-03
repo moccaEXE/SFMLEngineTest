@@ -2,7 +2,7 @@
 #include <SFML\Window.hpp>
 #include <SFML\Graphics.hpp>
 #include <Windows.h>
-#include "../Header/Player.h"
+#include "Player.h"
 
 
 class Game
@@ -28,6 +28,7 @@ private:
 	void processEvents();
 	void update(sf::Time elapsedTime);
 	void render();
+	void printFPS(int fps);
 
 	sf::RenderWindow _window;
 	Player _player;

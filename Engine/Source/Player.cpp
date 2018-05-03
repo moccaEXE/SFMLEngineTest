@@ -1,21 +1,18 @@
 #include "../Header/Player.h"
 
-ActionMap<int> Player::_playerInputs;
-
-Player::Player() : ActionTarget(_playerInputs), 
-_shape(sf::Vector2f(32, 32))
+Player::Player() : ActionTarget(Configuration::playerInputs)
 , _isMoving(false)
 , _rotation(0)
 {
-	_shape.setFillColor(sf::Color::Blue);
-	_shape.setOrigin(16, 16);
-	bind(PlayerInputs::Up, [this](const sf::Event&) {
+	_sprite.setTexture(Configuration::textures.get(Configuration::Textures::Player));
+	_sprite.setOrigin(24, 32);
+	bind(Configuration::PlayerInputs::Up, [this](const sf::Event&) {
 		_isMoving = true;
 	});
-	bind(PlayerInputs::Left, [this](const sf::Event&) {
+	bind(Configuration::PlayerInputs::Left, [this](const sf::Event&) {
 		_rotation -= 1;
 	});
-	bind(PlayerInputs::Right, [this](const sf::Event&) {
+	bind(Configuration::PlayerInputs::Right, [this](const sf::Event&) {
 		_rotation += 1;
 	});
 }
@@ -23,9 +20,6 @@ _shape(sf::Vector2f(32, 32))
 
 void Player::setDefaultsInputs()
 {
-	_playerInputs.map(PlayerInputs::Up, Action(sf::Keyboard::Up));
-	_playerInputs.map(PlayerInputs::Right, Action(sf::Keyboard::Right));
-	_playerInputs.map(PlayerInputs::Left, Action(sf::Keyboard::Left));
 }
 
 
@@ -35,15 +29,15 @@ void Player::update(sf::Time deltaTime)
 	if (_rotation != 0)
 	{
 		float angle = _rotation * 180 * seconds;
-		_shape.rotate(angle/100); // NOT /100
+		_sprite.rotate(angle); 
 	}
 	if (_isMoving)
 	{
-		float angle = _shape.getRotation() / 180 * M_PI - M_PI/2;
-		_velocity += sf::Vector2f(std::cos(angle), std::sin(angle)) * 1.f * seconds; // 60.f
+		float angle = float(_sprite.getRotation() / 180 * M_PI - M_PI/2);
+		_velocity += sf::Vector2f(std::cos(angle), std::sin(angle)) * 60.f * seconds; 
 	}
 
-	_shape.move(seconds*_velocity);
+	_sprite.move(seconds*_velocity);
 }
 
 
@@ -63,5 +57,5 @@ void Player::processEvents()
 void Player::draw(sf::RenderTarget& target, sf::RenderStates states)
 const
 {
-	target.draw(_shape, states);
+	target.draw(_sprite, states);
 }

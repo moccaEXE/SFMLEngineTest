@@ -1,8 +1,11 @@
-#include "../Header/Game.h"
+#pragma once
+#include "../../Asteroids/Engine/Game.h"
+#include "../../Asteroids/Engine/Configuration.h"
+//#include "../Header/Configuration.h"
 
 int main()
 {
-	Player::setDefaultsInputs();
+	Configuration::initialize();
 	Game game;
 	game.run(30);
 

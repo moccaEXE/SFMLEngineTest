@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML\Graphics.hpp>
 #include "ActionTarget.h"
+#include "Configuration.h"
 
 #define _USE_MATH_DEFINES
 #include <math.h>
@@ -15,21 +16,19 @@ public:
 	void setPosition(Args&& ... args);
 	void processEvents();
 	void update(sf::Time deltaTime);
-	enum PlayerInputs { Up, Left, Right };
 	static void setDefaultsInputs();
 private:
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates
 		states) const override;
-	sf::RectangleShape _shape;
+	sf::Sprite _sprite;
 	sf::Vector2f _velocity;
 	bool _isMoving;
 	int _rotation;
-	static ActionMap<int> _playerInputs;
 };
 
 
 template<typename ... Args>
 void Player::setPosition(Args&& ... args)
 {
-	_shape.setPosition(std::forward<Args>(args)...);
+	_sprite.setPosition(std::forward<Args>(args)...);
 }

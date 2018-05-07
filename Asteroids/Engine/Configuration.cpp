@@ -79,7 +79,7 @@ void Configuration::initTextures()
 {
 	//player
 	textures.load(Textures::PlayerLife, "SFMLEngineTest/Asteroids/Media/Player/life.png");
-	textures.load(Textures::PlayerTexture, "SFMLEngineTest/Asteroids/Media/Player/sprite.png");
+	textures.load(Textures::PlayerTexture, "SFMLEngineTest/Asteroids/Media/Player/Konav.png");
 
 	//saucers
 	textures.load(Textures::BigSaucer, "SFMLEngineTest/Asteroids/Media/Saucer/Big.png");

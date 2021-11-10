@@ -78,59 +78,59 @@ void Configuration::draw(sf::RenderTarget& target)
 void Configuration::initTextures()
 {
 	//player
-	textures.load(Textures::PlayerLife, "SFMLEngineTest/Asteroids/Media/Player/life.png");
-	textures.load(Textures::PlayerTexture, "SFMLEngineTest/Asteroids/Media/Player/Konav.png");
+	textures.load(Textures::PlayerLife, "Asteroids/Media/Player/life.png");
+	textures.load(Textures::PlayerTexture, "Asteroids/Media/Player/Konav.png");
 
 	//saucers
-	textures.load(Textures::BigSaucer, "SFMLEngineTest/Asteroids/Media/Saucer/Big.png");
-	textures.load(Textures::SmallSaucer, "SFMLEngineTest/Asteroids/Media/Saucer/Small.png");
+	textures.load(Textures::BigSaucer, "Asteroids/Media/Saucer/Big.png");
+	textures.load(Textures::SmallSaucer, "Asteroids/Media/Saucer/Small.png");
 
 	//meteors
-	textures.load(Textures::BigMeteor1, "SFMLEngineTest/Asteroids/Media/Meteor/Big1.png");
-	textures.load(Textures::BigMeteor2, "SFMLEngineTest/Asteroids/Media/Meteor/Big2.png");
-	textures.load(Textures::BigMeteor3, "SFMLEngineTest/Asteroids/Media/Meteor/Big3.png");
-	textures.load(Textures::BigMeteor4, "SFMLEngineTest/Asteroids/Media/Meteor/Big4.png");
+	textures.load(Textures::BigMeteor1, "Asteroids/Media/Meteor/Big1.png");
+	textures.load(Textures::BigMeteor2, "Asteroids/Media/Meteor/Big2.png");
+	textures.load(Textures::BigMeteor3, "Asteroids/Media/Meteor/Big3.png");
+	textures.load(Textures::BigMeteor4, "Asteroids/Media/Meteor/Big4.png");
 
-	textures.load(Textures::MediumMeteor1, "SFMLEngineTest/Asteroids/Media/Meteor/Medium1.png");
-	textures.load(Textures::MediumMeteor2, "SFMLEngineTest/Asteroids/Media/Meteor/Medium2.png");
+	textures.load(Textures::MediumMeteor1, "Asteroids/Media/Meteor/Medium1.png");
+	textures.load(Textures::MediumMeteor2, "Asteroids/Media/Meteor/Medium2.png");
 
-	textures.load(Textures::SmallMeteor1, "SFMLEngineTest/Asteroids/Media/Meteor/Small1.png");
-	textures.load(Textures::SmallMeteor2, "SFMLEngineTest/Asteroids/Media/Meteor/Small2.png");
-	textures.load(Textures::SmallMeteor3, "SFMLEngineTest/Asteroids/Media/Meteor/Small3.png");
-	textures.load(Textures::SmallMeteor4, "SFMLEngineTest/Asteroids/Media/Meteor/Small4.png");
+	textures.load(Textures::SmallMeteor1, "Asteroids/Media/Meteor/Small1.png");
+	textures.load(Textures::SmallMeteor2, "Asteroids/Media/Meteor/Small2.png");
+	textures.load(Textures::SmallMeteor3, "Asteroids/Media/Meteor/Small3.png");
+	textures.load(Textures::SmallMeteor4, "Asteroids/Media/Meteor/Small4.png");
 
 	//lasers
-	textures.load(Textures::ShootPlayer, "SFMLEngineTest/Asteroids/Media/Shoot/Player.png");
-	textures.load(Textures::ShootSaucer, "SFMLEngineTest/Asteroids/Media/Shoot/Saucer.png");
+	textures.load(Textures::ShootPlayer, "Asteroids/Media/Shoot/Player.png");
+	textures.load(Textures::ShootSaucer, "Asteroids/Media/Shoot/Saucer.png");
 }
 
 void Configuration::initFonts()
 {
-	fonts.load(Fonts::Gui, "SFMLEngineTest/Asteroids/Media/Font/trs-million.ttf");
+	fonts.load(Fonts::Gui, "Asteroids/Media/Font/trs-million.ttf");
 }
 
 void Configuration::initSounds()
 {
 	//laser
-	sounds.load(Sounds::LaserPlayer, "SFMLEngineTest/Asteroids/Media/SFX/laser1.ogg");
-	sounds.load(Sounds::LaserEnemy, "SFMLEngineTest/Asteroids/Media/SFX/laser2.ogg");
+	sounds.load(Sounds::LaserPlayer, "Asteroids/Media/SFX/laser1.ogg");
+	sounds.load(Sounds::LaserEnemy, "Asteroids/Media/SFX/laser2.ogg");
 	//saucers
-	sounds.load(Sounds::SaucerSpawn1, "SFMLEngineTest/Asteroids/Media/SFX/spawn1.flac");
-	sounds.load(Sounds::SaucerSpawn2, "SFMLEngineTest/Asteroids/Media/SFX/spawn2.flac");
+	sounds.load(Sounds::SaucerSpawn1, "Asteroids/Media/SFX/spawn1.flac");
+	sounds.load(Sounds::SaucerSpawn2, "Asteroids/Media/SFX/spawn2.flac");
 	//Boom
-	sounds.load(Sounds::Boom, "SFMLEngineTest/Asteroids/Media/SFX/boom.flac");
-	sounds.load(Sounds::Boom2, "SFMLEngineTest/Asteroids/Media/SFX/boom2.flac");
+	sounds.load(Sounds::Boom, "Asteroids/Media/SFX/boom.flac");
+	sounds.load(Sounds::Boom2, "Asteroids/Media/SFX/boom2.flac");
 	//Explosion
-	sounds.load(Sounds::Explosion1, "SFMLEngineTest/Asteroids/Media/SFX/explosion1.flac");
-	sounds.load(Sounds::Explosion2, "SFMLEngineTest/Asteroids/Media/SFX/explosion2.flac");
-	sounds.load(Sounds::Explosion3, "SFMLEngineTest/Asteroids/Media/SFX/explosion3.flac");
+	sounds.load(Sounds::Explosion1, "Asteroids/Media/SFX/explosion1.flac");
+	sounds.load(Sounds::Explosion2, "Asteroids/Media/SFX/explosion2.flac");
+	sounds.load(Sounds::Explosion3, "Asteroids/Media/SFX/explosion3.flac");
 	//others
-	sounds.load(Sounds::Jump, "SFMLEngineTest/Asteroids/Media/SFX/hyperspace.flac");
+	sounds.load(Sounds::Jump, "Asteroids/Media/SFX/hyperspace.flac");
 }
 
 void Configuration::initMusics()
 {
-	musics.load(Musics::Theme, "SFMLEngineTest/Asteroids/Media/Music/theme.ogg");
+	musics.load(Musics::Theme, "Asteroids/Media/Music/theme.ogg");
 }
 
 void Configuration::initPlayerInputs()
